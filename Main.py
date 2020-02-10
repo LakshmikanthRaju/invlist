@@ -5,8 +5,8 @@ from Forex.ForexList import Forex_List
 
 if __name__ == '__main__':
     #mf_list_obj = MF_List()
-    #MF_List().display_mf_details()
-    #Stock_List().display_stock_details()
+    MF_List().display_mf_details()
+    Stock_List().display_stock_details()
     Forex_List().display_forex_details()
 
 
