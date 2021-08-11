@@ -6,11 +6,17 @@ My_Equity = (
     'ICICI Prudential Value Discovery Fund - Growth',
 
     'Aditya Birla Sun Life MIDCAP Fund-Growth',
-    'HDFC Mid-Cap Opportunities Fund - Growth Option',
+    'HDFC Mid-Cap Opportunities Fund - Growth Plan',
+    'Axis Midcap Fund - Regular Plan - Growth',
 
     #'Franklin India Prima Fund-Growth', #(Sold)
     #'Reliance Vision Fund-GROWTH PLAN-Growth Option', #(Invalid)
     #'Nippon India Vision Fund-GROWTH PLAN-Growth Option', #(Sold)
+
+    'Axis Bluechip Fund - Regular Plan - Growth',
+    'Kotak Flexicap Fund - Growth',
+    'L&T Mid Cap Fund-Regular Plan-Growth',
+    'Axis Midcap Fund - Regular Plan - Growth',
 )
 
 My_ELSS = (
@@ -23,16 +29,15 @@ My_Debt = (
     'Nippon India Low Duration Fund- Growth Plan - Growth Option',
     'Axis Liquid Fund - Regular Plan - Growth Option',
     'SBI MAGNUM LOW DURATION FUND - REGULAR PLAN - GROWTH',
+    'Kotak Savings Fund -Growth'
 )
 
 Watch_Equity = (
     # watch list
     'HDFC Top 100 Fund - Growth Option',
-    'Kotak Standard Multicap Fund - Growth',
     'Parag Parikh Long Term Equity Fund - Regular Plan - Growth',
-    'L&T Mid Cap Fund-Regular Plan-Growth',
     'DSP US Flexible Equity Fund - Regular Plan - Growth Option',
-    'Franklin India Feeder - Franklin U.S. Opportunities Fund - Growth'
+    'Franklin India Feeder - Franklin U.S. Opportunities Fund - Growth',
 )
 
 MF_List_URL = "https://www.amfiindia.com/spages/NAVAll.txt"
