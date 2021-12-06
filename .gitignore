@@ -1,2 +1,5 @@
 .idea/
 venv/
+MF/__pycache__/*.pyc
+Stock/__pycache__/*.pyc
+Forex/__pycache__/*.pyc
