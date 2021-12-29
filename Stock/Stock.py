@@ -2,6 +2,7 @@
 import sys
 import json
 import requests
+import time
 from datetime import datetime
 
 from Stock.MyStock import Stock_URL
@@ -16,23 +17,33 @@ class Stock:
         self.obj = None
         self.__fetch_obj__()
 
-    def __fetch_obj__(self):
-        url = Stock_URL.format(self.name)
-
+    def __fetch_api(self, url):
         try:
             r = requests.get(url)
+            self.obj = json.loads(r.text)
+            if "Note" in self.obj:
+                time.sleep(60)
+            r = requests.get(url)
+            return r
         except requests.exceptions.RequestException as e:
             print(e)
             sys.exit(1)
 
+
+    def __fetch_obj__(self):
+        url = Stock_URL.format(self.name)
+        r = self.__fetch_api(url)
+
         if r.status_code is not requests.codes.ok:
             print("Error: API Failed - %s" % (str(r.status_code)))
             sys.exit(1)
-        else:
-            self.obj = json.loads(r.text)
-            #print(self.obj['meta']['scheme_name'])
+        self.obj = json.loads(r.text)
+
 
     def display(self):
+        if "Note" in self.obj:
+            print("ERROR: " + self.obj["Note"])
+            return
         self.date = self.obj["Meta Data"]["3. Last Refreshed"]
         dates = list(self.obj["Time Series (Daily)"].keys())
         self.price = self.obj["Time Series (Daily)"][dates[0]]["4. close"]

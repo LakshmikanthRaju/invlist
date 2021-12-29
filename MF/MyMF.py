@@ -2,21 +2,24 @@
 My_Equity = (
     'SBI BLUE CHIP FUND-REGULAR PLAN GROWTH',
     'Mirae Asset Large Cap Fund - Growth Plan',
-    'L&T India Value Fund-Regular Plan-Growth',
-    'ICICI Prudential Value Discovery Fund - Growth',
+    'Axis Bluechip Fund - Regular Plan - Growth',
 
-    'Aditya Birla Sun Life MIDCAP Fund-Growth',
     'HDFC Mid-Cap Opportunities Fund - Growth Plan',
+    'L&T Mid Cap Fund-Regular Plan-Growth',
     'Axis Midcap Fund - Regular Plan - Growth',
+
+    'Kotak Flexicap Fund - Growth',
+    'L&T India Value Fund-Regular Plan-Growth',
+
+    'Nippon India Small Cap Fund - Growth Plan - Growth Option',
+    'Kotak-Small Cap Fund - Growth',
 
     #'Franklin India Prima Fund-Growth', #(Sold)
     #'Reliance Vision Fund-GROWTH PLAN-Growth Option', #(Invalid)
     #'Nippon India Vision Fund-GROWTH PLAN-Growth Option', #(Sold)
 
-    'Axis Bluechip Fund - Regular Plan - Growth',
-    'Kotak Flexicap Fund - Growth',
-    'L&T Mid Cap Fund-Regular Plan-Growth',
-    'Axis Midcap Fund - Regular Plan - Growth',
+    'ICICI Prudential Value Discovery Fund - Growth',
+    'Aditya Birla Sun Life MIDCAP Fund-Growth',
 )
 
 My_ELSS = (

@@ -47,7 +47,7 @@ class MF:
             if days_index != 'all':
                 mark_date = datetime.strptime(self.obj['data'][days_index]['date'], DATE_FORMAT)
                 days_index = (current_date - mark_date).days
-            print("+{0}. Highest in last {1} days".format(str(diff), days_index))
+            print("   +{0}. Highest in last {1} days".format(str(diff), days_index))
         else:
             days_index = next((x for x, val in enumerate(price_list) if val < float(self.price)), 'all')
             if days_index != 'all':
@@ -58,4 +58,4 @@ class MF:
         max_value = max(price_list)
         max_date = self.obj['data'][price_list.index(max_value)]['date']
         max_date_ts = datetime.strptime(max_date, DATE_FORMAT)
-        print("Highest ever {} before {} days on {}".format(max_value, (current_date - max_date_ts).days, max_date))
+        print("   # Highest ever {} before {} days on {}".format(max_value, (current_date - max_date_ts).days, max_date))
