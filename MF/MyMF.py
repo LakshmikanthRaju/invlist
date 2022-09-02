@@ -3,6 +3,7 @@ My_Equity = (
     'SBI BLUE CHIP FUND-REGULAR PLAN GROWTH',
     'Mirae Asset Large Cap Fund - Growth Plan',
     'Axis Bluechip Fund - Regular Plan - Growth',
+    'CANARA ROBECO BLUE CHIP EQUITY FUND - REGULAR PLAN - GROWTH OPTION',
 
     'HDFC Mid-Cap Opportunities Fund - Growth Plan',
     'L&T Mid Cap Fund-Regular Plan-Growth',

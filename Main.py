@@ -18,8 +18,8 @@ if __name__ == '__main__':
     start = time.time()
 
     add_to_thread_pool(thread_pool, MF_List())
-    add_to_thread_pool(thread_pool, Stock_List())
-    add_to_thread_pool(thread_pool, Forex_List())
+    #add_to_thread_pool(thread_pool, Stock_List())
+    #add_to_thread_pool(thread_pool, Forex_List())
 
     for t in thread_pool:
         t.join()

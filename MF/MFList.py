@@ -56,13 +56,13 @@ class MF_List:
     def display_details(self):
         # print("MF: " + str(datetime.now().strftime("%d-%b-%Y (%H:%M:%S.%f)")))
         #my_mf_list = self.get_my_mf_list()
-        print("============== Debt List ================")
-        self.process_mf_list(self.get_mf_list(My_Debt))
+        #print("============== Debt List ================")
+        #self.process_mf_list(self.get_mf_list(My_Debt))
         #print("MF: " + str(datetime.now().strftime("%d-%b-%Y (%H:%M:%S.%f)")))
 
         print("============== ELSS List ================")
         self.process_mf_list(self.get_mf_list(My_ELSS))
         print("============= Equity List ===============")
         self.process_mf_list(self.get_mf_list(My_Equity))
-        print("============== Watch List ===============")
-        self.process_mf_list(self.get_mf_list(Watch_Equity))
+        #print("============== Watch List ===============")
+        #self.process_mf_list(self.get_mf_list(Watch_Equity))

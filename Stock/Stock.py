@@ -53,19 +53,31 @@ class Stock:
         print(self.name, self.price, self.date)
 
         dates.pop(0)
+        found = False
         if diff > 0:
             for date in dates:
                 if float(self.obj["Time Series (Daily)"][date]["2. high"]) > float(self.price):
                     mark_date = datetime.strptime(date, DATE_FORMAT)
                     days_index = (current_date - mark_date).days
-                    print("+{0}. Highest in last {1} days".format(str(diff), days_index))
-                    return
-            print("+{0}. Highest in all days".format(str(diff)))
+                    print("   +{0}. Highest in last {1} days".format(str(diff), days_index))
+                    found = True
+                    break
+            if not found:
+                print("   +{0}. Highest in all days".format(str(diff)))
         else:
             for date in dates:
                 if float(self.obj["Time Series (Daily)"][date]["3. low"]) >= float(self.price):
                     mark_date = datetime.strptime(date, DATE_FORMAT)
                     days_index = (current_date - mark_date).days
-                    print("{0}. Lowest in last {1} days".format(str(diff), days_index))
-                    return
-            print("{0}. Lowest in all days".format(str(diff)))
+                    print("   {0}. Lowest in last {1} days".format(str(diff), days_index))
+                    found = True
+                    break
+            if not found:
+                print("   {0}. Lowest in all days".format(str(diff)))
+
+        date_list = [obj for obj in self.obj['Time Series (Daily)']]
+        price_list = [self.obj['Time Series (Daily)'][obj]["2. high"] for obj in self.obj['Time Series (Daily)']]
+        max_value = max(price_list)
+        max_date = date_list[price_list.index(max_value)]
+        max_date_ts = datetime.strptime(max_date, DATE_FORMAT)
+        print("   # Highest ever {} before {} days on {}".format(max_value, (current_date - max_date_ts).days, max_date))
