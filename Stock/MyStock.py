@@ -1,5 +1,4 @@
 My_Stock = (
-    'VMW',
     'FB',
     'AAPL',
     'AVGO',

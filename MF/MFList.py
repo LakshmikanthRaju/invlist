@@ -3,7 +3,7 @@ import requests
 from datetime import datetime
 from threading import Thread
 
-from MF.MyMF import Watch_Equity, My_Debt, My_ELSS, My_Equity, MF_List_URL
+from MF.MyMF import My_Direct, My_Equity, MF_List_URL
 from MF.MF import MF
 
 class MF_List:
@@ -60,8 +60,8 @@ class MF_List:
         #self.process_mf_list(self.get_mf_list(My_Debt))
         #print("MF: " + str(datetime.now().strftime("%d-%b-%Y (%H:%M:%S.%f)")))
 
-        print("============== ELSS List ================")
-        self.process_mf_list(self.get_mf_list(My_ELSS))
+        print("============== Direct List ================")
+        self.process_mf_list(self.get_mf_list(My_Direct))
         print("============= Equity List ===============")
         self.process_mf_list(self.get_mf_list(My_Equity))
         #print("============== Watch List ===============")
